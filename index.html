@@ -72,8 +72,9 @@
         border: none;
         color: white;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        padding: 15px;
+        padding: 20px 30px;
         font-size: 14px;
+        border-radius: 0.25rem;
         box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
         
       }
@@ -151,12 +152,14 @@
     <script>  
     function buy() {
     let name = prompt("What is your name?");
+    let capName = name.charAt(0).toUpperCase() + name.slice(1);
+    capName;
     let age = prompt("How old are you?");
     if (age >= 18) {
-      alert("Yay " + name + ", today is your lucky day to purchase crypto! 🤑");
+      alert("Yay " + capName + ", today is your lucky day to purchase crypto! 🤑");
       window.location = 'https://crypto.com/us/';
       } else {
-      alert("Sorry " + name + ", you're not old enough to buy crypto yet. 😢");
+      alert("Sorry " + capName + ", you're not old enough to buy crypto yet. 😢");
       }
     }
     let buyCryptoButton = document.querySelector("button");
